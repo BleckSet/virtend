@@ -18,12 +18,25 @@ $('.slider.firts').slick({
       settings: {
         vertical: false, // Отключение вертикального слайдера
         slidesToShow: 1, // Показываем один слайд
-        centerMode:false,
+        centerMode: false,
         slidesToScroll: 1 // Прокручиваем один слайд
       }
     }
   ]
 });
+
+// Добавляем обработчик события прокрутки колесика мыши
+$('.slider.firts').on('wheel', function(e) {
+  e.preventDefault();
+  if (e.originalEvent.deltaY < 0) {
+    // Прокрутка вверх
+    $(this).slick('slickPrev');
+  } else {
+    // Прокрутка вниз
+    $(this).slick('slickNext');
+  }
+});
+
 
 $('.slider.second').slick({
   infinite: true,
@@ -50,6 +63,18 @@ $('.slider.second').slick({
       }
     }
   ]
+});
+
+// Добавляем обработчик события прокрутки колесика мыши
+$('.slider.second').on('wheel', function(e) {
+  e.preventDefault();
+  if (e.originalEvent.deltaY < 0) {
+    // Прокрутка вверх
+    $(this).slick('slickPrev');
+  } else {
+    // Прокрутка вниз
+    $(this).slick('slickNext');
+  }
 });
 
 $('.slick-slide a').on('click', function(event) {
