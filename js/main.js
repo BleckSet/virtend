@@ -15,7 +15,7 @@ $('.slider.firts').slick({
       breakpoint: 769, // При ширине экрана меньше или равной 769px
       settings: {
         autoplay: true,
-        autoplaySpeed: 3500,
+        autoplaySpeed: 300,
         vertical: false, // Отключение вертикального слайдера
         slidesToShow: 1, // Показываем один слайд
         centerMode: false,
@@ -24,19 +24,27 @@ $('.slider.firts').slick({
     }
   ]
 });
+// Добавляем флаг для предотвращения многократной прокрутки
+let isScrolling = false;
 
-// Добавляем обработчик события прокрутки колесика мыши
 $('.slider.firts').on('wheel', function(e) {
   e.preventDefault();
+  
+  if (isScrolling) return;  // Прерываем выполнение, если уже идет прокрутка
+
+  isScrolling = true;
+
   if (e.originalEvent.deltaY < 0) {
-    // Прокрутка вверх
     $(this).slick('slickPrev');
   } else {
-    // Прокрутка вниз
     $(this).slick('slickNext');
   }
-});
 
+  // Устанавливаем тайм-аут для сброса флага, чтобы обработать следующее движение
+  setTimeout(function() {
+    isScrolling = false;
+  }, 1500);  // Здесь можно изменить время в зависимости от нужной чувствительности
+});
 
 $('.slider.second').slick({
   infinite: true,
@@ -65,17 +73,26 @@ $('.slider.second').slick({
   ]
 });
 
-// Добавляем обработчик события прокрутки колесика мыши
+
 $('.slider.second').on('wheel', function(e) {
   e.preventDefault();
+  
+  if (isScrolling) return;  // Прерываем выполнение, если уже идет прокрутка
+
+  isScrolling = true;
+
   if (e.originalEvent.deltaY < 0) {
-    // Прокрутка вверх
     $(this).slick('slickPrev');
   } else {
-    // Прокрутка вниз
     $(this).slick('slickNext');
   }
+
+  // Устанавливаем тайм-аут для сброса флага, чтобы обработать следующее движение
+  setTimeout(function() {
+    isScrolling = false;
+  }, 1500);  // Здесь можно изменить время в зависимости от нужной чувствительности
 });
+
 
 $('.slick-slide a').on('click', function(event) {
   // Проверяем, если родительский элемент не имеет класса `slick-current`
