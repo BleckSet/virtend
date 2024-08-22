@@ -10,12 +10,12 @@ $('.slider.firts').slick({
   swipeToSlide: true,
   touchThreshold: 10,
   focusOnSelect: true,
-  autoplay: true,
-  autoplaySpeed: 3000,
   responsive: [
     {
       breakpoint: 769, // При ширине экрана меньше или равной 769px
       settings: {
+        autoplay: true,
+        autoplaySpeed: 3500,
         vertical: false, // Отключение вертикального слайдера
         slidesToShow: 1, // Показываем один слайд
         centerMode: false,
@@ -50,12 +50,12 @@ $('.slider.second').slick({
   focusOnSelect: true,
   swipeToSlide: true,
   touchThreshold: 10,
-  autoplay: true,
-  autoplaySpeed: 3000,
   responsive: [
     {
       breakpoint: 769, // При ширине экрана меньше или равной 769px
       settings: {
+        autoplay: true,
+        autoplaySpeed: 2000,
         centerMode:false,
         vertical: false, // Отключение вертикального слайдера
         slidesToShow: 1, // Показываем один слайд
