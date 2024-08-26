@@ -46,8 +46,8 @@ html.hold {
   text-decoration: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .appearance {
