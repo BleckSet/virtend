@@ -15,7 +15,7 @@ $('.slider.firts').slick({
       breakpoint: 769, // При ширине экрана меньше или равной 769px
       settings: {
         autoplay: true,
-        autoplaySpeed: 300,
+        autoplaySpeed: 3000,
         vertical: false, // Отключение вертикального слайдера
         slidesToShow: 1, // Показываем один слайд
         centerMode: false,
@@ -63,7 +63,7 @@ $('.slider.second').slick({
       breakpoint: 769, // При ширине экрана меньше или равной 769px
       settings: {
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         centerMode:false,
         vertical: false, // Отключение вертикального слайдера
         slidesToShow: 1, // Показываем один слайд
