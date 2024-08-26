@@ -4,9 +4,7 @@ $('.slider.firts').slick({
   arrows: false,
   draggable: true,
     infinite: true,
-
   vertical: true,
-  swipe: true,
   centerMode: true,
   swipeToSlide: true,
   touchThreshold: 10,
@@ -15,6 +13,8 @@ $('.slider.firts').slick({
     {
       breakpoint: 769, // При ширине экрана меньше или равной 769px
       settings: {
+  swipe: true,
+
         autoplay: true,
         autoplaySpeed: 3000,
         vertical: false, // Отключение вертикального слайдера
@@ -35,7 +35,6 @@ $('.slider.second').slick({
   draggable: true,
   vertical: true,
   centerMode: true,
-  swipe: true,
   focusOnSelect: true,
   swipeToSlide: true,
   touchThreshold: 10,
@@ -43,8 +42,10 @@ $('.slider.second').slick({
     {
       breakpoint: 769, // При ширине экрана меньше или равной 769px
       settings: {
+  swipe: true,
+
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 3500,
         centerMode:false,
         vertical: false, // Отключение вертикального слайдера
         slidesToShow: 1, // Показываем один слайд
