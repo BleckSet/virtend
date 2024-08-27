@@ -55,6 +55,27 @@ $('.slider.second').slick({
   ]
 });
 
+$('.slider.firts').on('wheel', function(e) {
+  e.preventDefault();
+  if (e.originalEvent.deltaY < 0) {
+    // Прокрутка вверх
+    $(this).slick('slickPrev');
+  } else {
+    // Прокрутка вниз
+    $(this).slick('slickNext');
+  }
+});
+
+$('.slider.second').on('wheel', function(e) {
+  e.preventDefault();
+  if (e.originalEvent.deltaY < 0) {
+    // Прокрутка вверх
+    $(this).slick('slickPrev');
+  } else {
+    // Прокрутка вниз
+    $(this).slick('slickNext');
+  }
+});
 
 
 
